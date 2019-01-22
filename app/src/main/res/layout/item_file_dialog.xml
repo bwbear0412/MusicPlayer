@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/fd_iv"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:scaleType="center"
+        android:layout_weight="0.2" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/fd_tv"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_weight="1.8"-->
+        <!--android:textSize="28sp" />-->
+    <com.example.lzd.musicplayer.ScrollTextView
+        android:gravity="center_horizontal|left"
+        android:id="@+id/fd_tv"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1.8"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textSize="22sp" />
+</LinearLayout>

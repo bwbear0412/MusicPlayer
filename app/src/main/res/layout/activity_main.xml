@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/play_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:choiceMode="singleChoice"
+            android:divider="@null" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_gray"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+        <!-- 目前播放时间 -->
+        <TextView
+            android:id="@+id/play_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <!-- song progress -->
+        <SeekBar
+            android:id="@+id/play_seek"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"></SeekBar>
+
+        <TextView
+            android:id="@+id/play_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_gray"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <!-- 播放 -->
+        <ImageButton
+            android:id="@+id/play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:src="@drawable/ic_music_play" />
+
+        <!-- 上一首 -->
+        <ImageButton
+            android:id="@+id/pre_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/play_button"
+            android:background="@null"
+            android:paddingRight="40dp"
+            android:src="@drawable/ic_music_previous" />
+
+
+        <!-- 下一首 -->
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/play_button"
+            android:background="@null"
+            android:paddingLeft="40dp"
+            android:src="@drawable/ic_music_next" />
+
+    </RelativeLayout>
+</LinearLayout>

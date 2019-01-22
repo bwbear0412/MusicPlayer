@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/item_selector"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/music_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/dark_gray"
+        android:textSize="18sp"
+        tools:ignore="RtlSymmetry" />
+
+    <com.example.lzd.musicplayer.ScrollTextView
+        android:id="@+id/music_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingStart="20dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textSize="12sp"
+        tools:ignore="RtlSymmetry" />
+</LinearLayout>
